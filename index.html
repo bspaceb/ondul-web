@@ -1,46 +1,490 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- seo최적화 -->
-    <meta property="og:title" content="온둘 | 기억 속 온기를 더한 향수 구독 플랫폼"/>
-    <meta property="og:site_name" content="Ondul">
-    <meta property="og:description" content="추억 속 향을 되감아 나만의 향기를 온둘과 함께 기록해보세요."/>
-    <meta property="og:image" content="https://bspace.dothome.co.kr/img/ogimg.jpg">
-    <meta property="og:url" content="https://bspace.dothome.co.kr/">
-    <meta property="og:type" content="website">
-    <title>Ondul</title>
-    <!-- 파비콘 -->
-     <link rel="shortcut icon" href="/img/favicon.ico">
-     <link rel="apple-touch-icon" href="/img/favicon.ico">
-    <!-- 바로가기 -->
-     
-    <!-- 리셋 -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <!-- 폰트 -->
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
-    <!-- 플러그인 -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
-    >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- seo최적화 -->
+  <meta property="og:title" content="온둘 | 기억 속 온기를 더한 향수 구독 플랫폼" />
+  <meta property="og:site_name" content="Ondul">
+  <meta property="og:description" content="추억 속 향을 되감아 나만의 향기를 온둘과 함께 기록해보세요." />
+  <meta property="og:image" content="https://bspace.dothome.co.kr/img/ogimg.jpg">
+  <meta property="og:url" content="https://bspace.dothome.co.kr/">
+  <meta property="og:type" content="website">
+  <title>Ondul</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/favicon.ico">
+  <!-- 바로가기 -->
 
-    <!-- Bootstrap Icons -->
-    <link 
-        rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
-     <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css"/>
-     
-    <!-- 내꺼 -->
-     <link rel="stylesheet" href="css/mystyle.css">
+  <!-- 리셋 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- 폰트 -->
+ <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+
+  <!-- 플러그인 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css" />
+
+  <!-- 내꺼 -->
+  <link rel="stylesheet" href="css/mystyle.css">
 </head>
-<body>
 
-        <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/swiper/swiper-bundle.min.js"></script>
-<script src="./js/common.js"></script>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container-fluid px-4 position-relative main-nav-container">
+
+      <a class="navbar-brand nav-logo m-0" href="#"><img src="img/logo.svg" alt="메인 로고"></a>
+
+      <button class="navbar-toggler border-0 p-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="custom-toggler-icon d-flex flex-column justify-content-between">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav nav-menu gap-lg-4 text-center mx-auto my-3 my-lg-0">
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link menu-item dropdown-toggle-custom" href="#" role="button">브랜드 소개</a>
+            <ul class="dropdown-menu custom-dropdown-menu border-0 shadow-sm">
+              <li><a class="dropdown-item" href="#">온둘의 온도</a></li>
+              <li><a class="dropdown-item" href="#">향기가 만들어지는 과정</a></li>
+              <li><a class="dropdown-item" href="#">공간 조향 가이드</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link menu-item dropdown-toggle-custom" href="#" role="button">향기 찾기</a>
+            <ul class="dropdown-menu custom-dropdown-menu border-0 shadow-sm">
+              <li><a class="dropdown-item" href="#">모든 향기 보기</a></li>
+              <li><a class="dropdown-item" href="#">이달의 추천</a></li>
+              <li><a class="dropdown-item" href="#">분위기별 찾기</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link menu-item dropdown-toggle-custom" href="#" role="button">취향 분석</a>
+            <ul class="dropdown-menu custom-dropdown-menu border-0 shadow-sm">
+              <li><a class="dropdown-item" href="#">나의 향기 찾기</a></li>
+              <li><a class="dropdown-item" href="#">공간 궁합 테스트</a></li>
+              <li><a class="dropdown-item" href="#">향기 기억 저장소</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link menu-item dropdown-toggle-custom" href="#" role="button">정기 구독</a>
+            <ul class="dropdown-menu custom-dropdown-menu border-0 shadow-sm">
+              <li><a class="dropdown-item" href="#">구독 가이드</a></li>
+              <li><a class="dropdown-item" href="#">먼저 써보기</a></li>
+              <li><a class="dropdown-item" href="#">구독 시작하기</a></li>
+              <li><a class="dropdown-item" href="#">나의 온둘</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav-utils d-flex align-items-center justify-content-center gap-3 ms-lg-auto mb-2 mb-lg-0">
+          <a href="#" class="util-item text-decoration-none">나의 온둘</a>
+        </div>
+
+      </div>
+
+    </div>
+  </nav>
+  <section class="hero-section d-flex align-items-center">
+    <div class="container hero-container">
+      <div class="row align-items-center">
+
+        <div class="col-12 col-lg-9 text-start">
+
+          <h1 class="hero-title mb-4">일상 속, 온기를 담다</h1>
+
+          <a href="#" class="hero-link d-inline-flex align-items-center gap-2 text-decoration-none">
+            <span class="link-text">온둘 알아가기</span>
+            <span class="link-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L14 12L6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M13 18L21 12L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="product-stream-section py-5 overflow-hidden">
+  <div class="container">
+    
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title">│자주 찾는 향기│</h2>
+      </div>
+    </div>
+
+    <div class="col-12 mx-auto">
+      <div class="swiper product-photo-swiper">
+        
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume1.jpg" alt="제품 사진 1">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume2.jpg" alt="제품 사진 2">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume3.jpg" alt="제품 사진 3">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume4.jpg" alt="제품 사진 4">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume5.jpg" alt="제품 사진 5">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume6.png" alt="제품 사진 6">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume7.png" alt="제품 사진 7">
+            </div>
+          </div>
+          
+          <div class="swiper-slide product-card">
+            <div class="img-box rounded-4 overflow-hidden">
+              <img src="img/perfume/perfume8.png" alt="제품 사진 8">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-controls-wrap d-flex justify-content-center gap-3 mt-4">
+          <div class="swiper-button-prev-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; cursor: pointer;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </div>
+          <div class="swiper-button-next-custom rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; cursor: pointer;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+        </div>
+
+      </div> </div>
+
+  </div>
+</section>
+  <aside class="ondul-quick-menu">
+  <div class="d-flex flex-column gap-2 align-items-center">
+    
+    <a href="#mypage" class="quick-item-btn d-flex flex-column align-items-center justify-content-center" title="마이페이지">
+      <div class="quick-icon">
+        <img src="img/quick/mypage.svg" alt="마이페이지 아이콘" class="img-fluid">
+      </div>
+      <span class="quick-text">MY page</span>
+    </a>
+
+    <a href="#analysis" class="quick-item-btn d-flex flex-column align-items-center justify-content-center" title="취향분석">
+      <div class="quick-icon">
+        <img src="img/quick/analyze.svg" alt="취향분석 아이콘" class="img-fluid">
+      </div>
+      <span class="quick-text">취향분석</span>
+    </a>
+
+    <a href="#cs" class="quick-item-btn d-flex flex-column align-items-center justify-content-center" title="고객센터">
+      <div class="quick-icon">
+        <img src="img/quick/hlep.svg" alt="고객센터 아이콘" class="img-fluid">
+      </div>
+      <span class="quick-text">고객센터</span>
+    </a>
+
+    <a href="#" class="quick-item-btn d-flex flex-column align-items-center justify-content-center btn-to-top" title="위로 가기">
+      <div class="quick-icon">
+        <img src="img/quick/top.svg" alt="위로 가기 아이콘" class="img-fluid">
+      </div>
+      <span class="quick-text">TOP</span>
+    </a>
+
+  </div>
+</aside>
+  <section class="mood-section py-5">
+    <header class="mood-header text-center">
+      <p class="sub-title">│ 온둘의 mood │</p>
+      <h2 class="main-title">오늘의 느낌으로 향기를 찾아보세요</h2>
+    </header>
+
+    <div class="container mood-container">
+
+      <article class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <div class="card-image">
+            <img src="img/mood/thumb1.jpg" alt="산책길" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="card-text">
+            <h3>향기로운 꽃내음이 나는 산책길</h3>
+            <p>여유로운 오후, 산책길에서 따스히<br>올라오는 꽃향기가 생각날 때</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="row align-items-center justify-content-between flex-md-row-reverse">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <div class="card-image">
+            <img src="img/mood/thumb2.jpg" alt="비누향" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="card-text">
+            <h3>샤워 후 맡는 보송한 비누향</h3>
+            <p>포근한 베이비샤워 바디워시 향과<br>아련히 남는 수증기 느낌이 생각날 때</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <div class="card-image">
+            <img src="img/mood/thumb3.jpg" alt="자일리톨" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="card-text">
+            <h3>시원한 향이 돋아나는 자일리톨</h3>
+            <p>입안 상쾌히 시원함을 안겨주는<br>자일리톨의 상쾌함이 생각날 때</p>
+          </div>
+        </div>
+      </article>
+      <article class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <div class="card-image">
+            <img src="img/mood/thumb4.jpg" alt="산책길" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="card-text">
+            <h3>식물원 속 피어난 아카시아 꽃</h3>
+            <p>여러 꽃향과 나무향이 섞여<br>신비로운 향을 느끼고 싶을 때</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="row align-items-center justify-content-between flex-md-row-reverse">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <div class="card-image">
+            <img src="img/mood/thumb5.jpg" alt="비누향" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="card-text">
+            <h3>따스한 햇살이 비추는 이불</h3>
+            <p>여유로운 휴일 아침, 블라인드가 살짝 쳐진 창문 사이로 들어오는 햇빛과<br>아침공기가 생각날 때</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <div class="card-image">
+            <img src="img/mood/thumb6.jpg" alt="자일리톨" class="img-fluid w-100">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="card-text">
+            <h3>은은히 느껴지는 책의 잔향</h3>
+            <p>따뜻한 차 한 잔과 함께 책 한 장 한 장<br>넘길 때마다 느껴지는 책 향이 생각날 때</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="search-section py-5">
+    <div class="container search-container">
+      <div class="row align-items-center gx-3">
+
+        <div class="col-12 col-md-6 mb-5 mb-md-0">
+          <div class="search-left-wrap">
+            <h2 class="search-title mb-3">나에게 필요한 향기를 찾는다면?</h2>
+            <p class="search-sub-title mb-4">온둘의 다양한 제품을 추천해드립니다.</p>
+
+            <div class="search-bar-wrap">
+              <input type="text" class="form-control border-0 bg-transparent shadow-none p-0" placeholder="우드 향수"
+                aria-label="향수 검색">
+
+              <button class="search-btn border-0 d-flex align-items-center justify-content-center" type="button"
+                aria-label="검색하기">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-md-5 d-flex flex-wrap align-items-center gap-3 justify-content-start justify-content-md-center">
+          <div class="tag-group d-flex flex-column gap-4 align-items-start">
+            <span class="badge-tag tag-cozy">#포근함</span>
+            <span class="badge-tag tag-vibrant">#활기찬</span>
+          </div>
+          <div class="tag-group d-flex flex-column gap-5 align-items-start pt-4">
+            <span class="badge-tag tag-rainy">#비오는 날</span>
+            <span class="badge-tag tag-dawn">#새벽공기</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="gift-section py-5">
+    <div class="container gift-container">
+      <div class="row align-items-center justify-content-between">
+
+        <div class="col-12 col-md-5 text-center mb-5 mb-md-0">
+          <div class="gift-content d-flex flex-column align-items-center">
+            <h2 class="gift-title mb-3">반려동물 전용 퍼퓸 기프트</h2>
+            <p class="gift-sub-title mb-4">
+              우리의 반려 가족과 함께 사용해도 안심할 수 있는<br>
+              반려동물 전용 퍼퓸 기프트를 증정해드립니다.
+            </p>
+
+            <a href="#"
+              class="gift-link-btn d-flex align-items-center justify-content-center gap-3 text-decoration-none"
+              aria-label="기프트 페이지로 이동">
+              <span class="icon-paw"><img src="img/pet/poot.svg" alt=""></span>
+              <span class="icon-arrow">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="gift-image-wrap">
+            <img src="img/pet/petgift.jpg" alt="반려동물 전용 퍼퓸 기프트 이미지" class="img-fluid w-100">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer class="footer-section">
+    <div class="container footer-container">
+
+      <div class="row align-items-start justify-content-between footer-top pb-5">
+
+        <div class="col-12 col-md-4 mb-5 mb-md-0">
+          <div class="footer-logo">
+            <img src="img/logo.svg" alt="푸터 로고">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-6 d-flex flex-column gap-3">
+              <a href="#" class="footer-link">브랜드 소개</a>
+              <a href="#" class="footer-link">향기 찾기</a>
+              <a href="#" class="footer-link">취향 분석</a>
+              <a href="#" class="footer-link">정기 구독</a>
+            </div>
+            <div class="col-6 d-flex flex-column gap-3">
+              <a href="#" class="footer-link">문의하기</a>
+              <a href="#" class="footer-link">개인정보 보호</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom pt-4">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+          <div class="copyright text-muted">
+            이용약관
+          </div>
+          <div class="footer-settings d-flex gap-3">
+            <a href="#" class="setting-link">쿠키 설정</a>
+            <a href="#" class="setting-link">Terms of Service</a>
+            <a href="#" class="setting-link">Cookies Settings</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mainProductSwiper = new Swiper('.product-photo-swiper', {
+      // 💡 핵심 설정
+      loop: true,               // 무한 반복 순환
+      speed: 600,               // 스르륵 밀려나는 속도 (0.6초)
+      
+      // 💡 자동 재생 설정 (+ 마우스 호버 시 일시정지 내장)
+      autoplay: {
+        delay: 3500,            // 3.5초마다 작동
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true, // 
+      },
+
+      // 💡 커스텀 화살표 버튼 연결
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
+
+      // 💡 [반응형 대응] 화면 크기별로 보여줄 사진 개수와 간격 정밀 정렬
+      breakpoints: {
+        // 모바일 (기본값): 한 화면에 사진 1장 꽉 차게
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 16
+        },
+        // 태블릿 (576px 이상): 한 화면에 사진 2장 보이게
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // 데스크톱 (992px 이상): 한 화면에 사진 3장 보이게 (양옆에 다음 사진이 스르륵 걸침)
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 24
+        }
+      }
+    });
+  });
+</script>
 </body>
 </html>
