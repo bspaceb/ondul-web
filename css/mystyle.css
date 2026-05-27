@@ -1,4 +1,5 @@
 
+
 @font-face {
     font-family: 'MaruBuri';
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2);
@@ -1071,7 +1072,7 @@ body {
   font-size: 13px;
   font-weight: 400;
   color: #777777;
-  text-decoration: underline; 
+  text-decoration: none; 
   transition: color 0.2s ease;
 }
 
